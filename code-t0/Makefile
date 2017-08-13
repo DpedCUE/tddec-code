@@ -14,15 +14,15 @@ PROJECT_HOME_DIR = .
 
 CPP_PLATFORM = Gcc
 
-CPPUTEST_WARNINGFLAGS += -Wall 
-CPPUTEST_WARNINGFLAGS += -Werror 
-CPPUTEST_WARNINGFLAGS += -Wswitch-default 
-CPPUTEST_WARNINGFLAGS += -Wswitch-enum
-CPPUTEST_WARNINGFLAGS += -Wno-documentation
-CPPUTEST_CFLAGS += -Wextra 
-CPPUTEST_CFLAGS += -pedantic 
-CPPUTEST_CFLAGS += -Wstrict-prototypes
-
+CPPUTEST_WARNINGFLAGS += -Wno-long-long
+CPPUTEST_WARNINGFLAGS += -Wno-c++14-compat
+CPPUTEST_WARNINGFLAGS += -Wall -Wswitch-default -Werror
+#CPPUTEST_WARNINGFLAGS += -Wno-missing-prototypes
+CPPUTEST_WARNINGFLAGS += -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic
+CPPUTEST_WARNINGFLAGS += -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter
+#CPPUTEST_CFLAGS = -std=c89
+CPPUTEST_CFLAGS += -Wall -Wstrict-prototypes -pedantic -Wno-c++14-compat
+LD_LIBRARIES = -lpthread
 SRC_DIRS = \
 	src/util\
 	src/HomeAutomation\

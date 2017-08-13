@@ -51,20 +51,15 @@ INCLUDE_DIRS =\
 MOCKS_SRC_DIRS = \
 	mocks\
 	
-CPPUTEST_WARNINGFLAGS += -Wall 
-CPPUTEST_WARNINGFLAGS += -Wswitch-default 
-CPPUTEST_WARNINGFLAGS += -Werror 
-CPPUTEST_WARNINGFLAGS += -Wno-format-nonliteral
-CPPUTEST_WARNINGFLAGS += -Wno-sign-conversion 
-CPPUTEST_WARNINGFLAGS += -Wno-pedantic 
-CPPUTEST_WARNINGFLAGS += -Wno-shadow
-CPPUTEST_WARNINGFLAGS += -Wno-missing-field-initializers
-CPPUTEST_WARNINGFLAGS += -Wno-unused-parameter
-#CPPUTEST_CFLAGS = -std=c89 
-CPPUTEST_CFLAGS += -Wall
-CPPUTEST_CFLAGS += -Wstrict-prototypes
-CPPUTEST_CFLAGS += -pedantic
-CPPUTEST_CFLAGS += -Wno-missing-prototypes
+CPPUTEST_WARNINGFLAGS += -Wno-long-long
+CPPUTEST_WARNINGFLAGS +=-Wno-address
+CPPUTEST_WARNINGFLAGS += -Wno-c++14-compat
+CPPUTEST_WARNINGFLAGS += -Wall -Wswitch-default -Werror
+#CPPUTEST_WARNINGFLAGS += -Wno-missing-prototypes
+CPPUTEST_WARNINGFLAGS += -Wno-format-nonliteral -Wno-sign-conversion -Wno-pedantic
+CPPUTEST_WARNINGFLAGS += -Wno-shadow -Wno-missing-field-initializers -Wno-unused-parameter
+#CPPUTEST_CFLAGS = -std=c89
+CPPUTEST_CFLAGS += -Wall -Wstrict-prototypes -pedantic -Wno-c++14-compat
 LD_LIBRARIES = -lpthread
 	
   
